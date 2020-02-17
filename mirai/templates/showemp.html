@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      
+
+  </head>
+
+  <body>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Company</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for employee in employees %}
+        <tr>
+          <td>{{employee.eFname}}</td>
+          <td>{{employee.eLname}}</td>
+          <td>{{employee.eCompany}}</td>
+          <td>{{employee.eEmail}}</td>
+          <td>{{employee.ePhone}}</td>
+          <td>
+            
+            <button class="btn-primary btn-sm" onclick="location.href='/deleteEmp/{{employee.eFname}}'">Delete</button>
+            <button class="btn-secondary btn-sm" onclick="location.href='/editemp/{{employee.eFname}}'">Update</button>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

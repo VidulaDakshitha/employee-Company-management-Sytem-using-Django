@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+  </head>
+
+  <body>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Company Name</th>
+          <th>Email</th>
+          <th>Logo</th>
+          <th>website</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for company in companies %}
+        <tr>
+          <td>{{company.cName}}</td>
+          <td>{{company.cEmail}}</td>
+          <td>{{company.cLogo}}</td>
+          <td>{{company.cUrl}}</td>
+          <td>
+            <!--<a href="/delete/{{company.cName}}">Delete</a>
+            <a href="/edit/{{company.cName}}">Update</a>
+            <a href="emp">Update</a>-->
+            <button class="btn-primary btn-sm" onclick="location.href='/delete/{{company.cName}}'">Delete</button>
+            <button class="btn-secondary btn-sm" onclick="location.href='/edit/{{company.cName}}'">Update</button>
+            <button class="btn-warning btn-sm" onclick="location.href='/emp'">Add Employee</button>
+
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>

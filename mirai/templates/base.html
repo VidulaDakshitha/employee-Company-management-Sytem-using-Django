@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Auth Tutorial{% endblock %}</title>
+  {% load static %}
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+</head>
+<body>
+    
+    <div class="container booking-form2">
+        <div class="first-info">
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <hr class="mt-16 mb-16">
+  <main style="padding-bottom: 10%;">
+    {% block content %}
+   
+    {% endblock %}
+
+    
+  </main>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html

@@ -1,0 +1,52 @@
+body {
+  background: url("/static/images/background2.jpg") no-repeat center center
+    fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.forma {
+  padding: 10px 70px 70px 70px;
+}
+
+.booking-form {
+  width: 41.67%;
+  background: rgba(14, 13, 13, 0.747);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 10%;
+  margin-left: 55%;
+  margin-top: 8%;
+}
+
+.form-label {
+  color: white;
+}
+
+.booking-form2 {
+  width: 41.67%;
+  background: rgba(14, 13, 13, 0.747);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 5%;
+  margin-left: 28%;
+  margin-top: 10%;
+}
+
+input {
+  display: inline-block;
+  float: right;
+  width: 100%;
+}
+
+.booking-form3 {
+  width: 41.67%;
+  background: rgba(14, 13, 13, 0.747);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 7%;
+  margin-left: 55%;
+  margin-top: 10%;
+}

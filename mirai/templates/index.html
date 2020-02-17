@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mirai web app</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/styles.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
+  <body>
+      <div>
+    <div class="booking-form">
+        <h3 style="color: bisque;padding-top: 5%;">Add Company Details</h3>
+    <form method="POST" action="/comp" class="forma">
+      {% csrf_token %}
+
+      <div class="form-group form-input">
+        <label class="form-label">Company Name:</label>
+        <div>{{form.cName}}</div>
+        <!--<<input type="text" value="{{form.eFname}}" />-->
+      </div>
+
+      <div class="form-group form-input">
+        <label class="form-label">Company Email</label>
+        <div>{{form.cEmail}}</div>
+        <!--<input type="text" value="{{form.eLname}}" />-->
+      </div>
+
+      <div class="form-group form-input">
+        <label class="form-label">Logo:</label>
+        <div>{{form.cLogo}}</div>
+      </div>
+
+      <div class="form-group form-input">
+        <label class="form-label">Company Website:</label>
+        <div>{{form.cUrl}}</div>
+        <!--<input type="text" value="{{form.eEmail}}" />-->
+      </div>
+
+      <button type="submit" class="btn-success">Submit</button>
+    </form>
+</div>
+</div>
+  </body>
+</html>
